@@ -53,13 +53,38 @@ class QRScannerController : UIViewController {
 }
 
 struct QRScanner: UIViewControllerRepresentable {
-    var qrCodeScannedDelegate: (String) -> Void
+    @Binding var result: String
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let controller = QRScannerController()
+        controller.delegate = context.coordinator
         return controller
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator($result)
+    }
+    
+    class Coordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
+        @Binding var scanResult: String
+        
+       init(_ scanResult: Binding<String>) {
+           self._scanResult = scanResult
+       }
+        
+        func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+            if (metadataObjects.count == 0) {
+                scanResult = "No QR Code detected"
+                return
+            }
+            let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+            
+            if metadataObj.type == AVMetadataObject.ObjectType.qr, let result = metadataObj.stringValue {
+                scanResult = result
+            }
+        }
     }
 }

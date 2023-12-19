@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ScanView: View {
-    var qrCodeScannedDelegate: (String) -> Void
+    @Binding var result: String
     
     var body: some View {
-        QRScanner(qrCodeScannedDelegate: qrCodeScannedDelegate)
+        QRScanner(result: $result)
     }
 }
 
 #Preview {
-    ScanView(qrCodeScannedDelegate: {_ in
-    })
+    ScanView(result: .constant(""))
 }

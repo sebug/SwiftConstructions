@@ -22,9 +22,7 @@ struct ScanHost: View {
                 }
                 .padding()
                 Spacer()
-                ScanView(qrCodeScannedDelegate: { scanResult in
-                    result = scanResult
-                })
+                ScanView(result:$result)
                 Spacer()
             } else {
                 Spacer()
