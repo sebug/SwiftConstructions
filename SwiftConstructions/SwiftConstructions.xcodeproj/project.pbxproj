@@ -17,6 +17,7 @@
 		EB4318F42B31BD750031CF0B /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F32B31BD750031CF0B /* ScanButton.swift */; };
 		EB4318F62B31CCD60031CF0B /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F52B31CCD60031CF0B /* ScanView.swift */; };
 		EB4318F82B31CD240031CF0B /* ScanHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F72B31CD240031CF0B /* ScanHost.swift */; };
+		EB4318FA2B31D1780031CF0B /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F92B31D1780031CF0B /* QRScannerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EB4318F32B31BD750031CF0B /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		EB4318F52B31CCD60031CF0B /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		EB4318F72B31CD240031CF0B /* ScanHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHost.swift; sourceTree = "<group>"; };
+		EB4318F92B31D1780031CF0B /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				EB4318F32B31BD750031CF0B /* ScanButton.swift */,
 				EB4318F52B31CCD60031CF0B /* ScanView.swift */,
 				EB4318F72B31CD240031CF0B /* ScanHost.swift */,
+				EB4318F92B31D1780031CF0B /* QRScannerController.swift */,
 			);
 			path = SwiftConstructions;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				EB4318F82B31CD240031CF0B /* ScanHost.swift in Sources */,
 				EB4318F42B31BD750031CF0B /* ScanButton.swift in Sources */,
 				EB4318CA2B31BC890031CF0B /* SwiftConstructionsApp.swift in Sources */,
+				EB4318FA2B31D1780031CF0B /* QRScannerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
