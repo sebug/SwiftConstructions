@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScanHost: View {
     @State private var isScanning = false
+    @Binding var result: String
     
     var body: some View {
         VStack {
@@ -21,9 +22,15 @@ struct ScanHost: View {
                 }
                 .padding()
                 Spacer()
-                ScanView()
+                ScanView(qrCodeScannedDelegate: { scanResult in
+                    result = scanResult
+                })
                 Spacer()
             } else {
+                Spacer()
+                if (!result.isEmpty) {
+                    Text(result)
+                }
                 Spacer()
                 ScanButton(scanCallback: {
                     isScanning = !isScanning
@@ -34,5 +41,5 @@ struct ScanHost: View {
 }
 
 #Preview {
-    ScanHost()
+    ScanHost(result: .constant("SampleResult"))
 }

@@ -53,6 +53,8 @@ class QRScannerController : UIViewController {
 }
 
 struct QRScanner: UIViewControllerRepresentable {
+    var qrCodeScannedDelegate: (String) -> Void
+    
     func makeUIViewController(context: Context) -> some UIViewController {
         let controller = QRScannerController()
         return controller
