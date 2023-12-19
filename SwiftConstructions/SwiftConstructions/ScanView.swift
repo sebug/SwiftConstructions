@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ScanView: View {
     @Binding var result: String
+    @Binding var resultCaptured: Bool
     
     var body: some View {
-        QRScanner(result: $result)
+        QRScanner(result: $result,
+        resultCaptured: $resultCaptured)
     }
 }
 
 #Preview {
-    ScanView(result: .constant(""))
+    ScanView(result: .constant(""),
+             resultCaptured: .constant(false))
 }

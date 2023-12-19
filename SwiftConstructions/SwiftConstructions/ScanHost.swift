@@ -10,10 +10,11 @@ import SwiftUI
 struct ScanHost: View {
     @State private var isScanning = false
     @Binding var result: String
+    @Binding var resultCaptured: Bool
     
     var body: some View {
         VStack {
-            if (isScanning) {
+            if (isScanning && !resultCaptured) {
                 HStack {
                     Button("Cancel", role: .cancel) {
                         isScanning = false
@@ -22,7 +23,8 @@ struct ScanHost: View {
                 }
                 .padding()
                 Spacer()
-                ScanView(result:$result)
+                ScanView(result:$result,
+                resultCaptured: $resultCaptured)
                 Spacer()
             } else {
                 Spacer()
@@ -39,5 +41,6 @@ struct ScanHost: View {
 }
 
 #Preview {
-    ScanHost(result: .constant("SampleResult"))
+    ScanHost(result: .constant("SampleResult"), resultCaptured: 
+             .constant(false))
 }

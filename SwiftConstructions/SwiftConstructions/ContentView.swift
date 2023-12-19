@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScanHost(result: .constant(""))
+        ScanHost(result: .constant(""),
+                 resultCaptured: .constant(false))
     }
 }
 

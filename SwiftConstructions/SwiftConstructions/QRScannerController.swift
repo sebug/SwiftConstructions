@@ -54,6 +54,7 @@ class QRScannerController : UIViewController {
 
 struct QRScanner: UIViewControllerRepresentable {
     @Binding var result: String
+    @Binding var resultCaptured: Bool
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let controller = QRScannerController()
@@ -65,14 +66,17 @@ struct QRScanner: UIViewControllerRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator($result)
+        Coordinator($result, resultCaptured:  $resultCaptured)
     }
     
     class Coordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
         @Binding var scanResult: String
+        @Binding var resultCaptured: Bool
         
-       init(_ scanResult: Binding<String>) {
+       init(_ scanResult: Binding<String>,
+            resultCaptured: Binding<Bool>) {
            self._scanResult = scanResult
+           self._resultCaptured = resultCaptured
        }
         
         func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
@@ -84,6 +88,7 @@ struct QRScanner: UIViewControllerRepresentable {
             
             if metadataObj.type == AVMetadataObject.ObjectType.qr, let result = metadataObj.stringValue {
                 scanResult = result
+                resultCaptured = true
             }
         }
     }
