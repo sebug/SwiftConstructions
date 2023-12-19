@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ScanButton: View {
+    public var scanCallback: () -> ()
+    
     var body: some View {
         Button {
-            
+            scanCallback()
         } label: {
             Text("Scan")
         }
@@ -18,5 +20,7 @@ struct ScanButton: View {
 }
 
 #Preview {
-    ScanButton()
+    ScanButton(scanCallback: {
+        
+    })
 }

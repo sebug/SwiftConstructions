@@ -13,10 +13,21 @@ struct ScanHost: View {
     var body: some View {
         VStack {
             if (isScanning) {
+                HStack {
+                    Button("Cancel", role: .cancel) {
+                        isScanning = false
+                    }
+                    Spacer()
+                }
+                .padding()
+                Spacer()
                 ScanView()
+                Spacer()
             } else {
                 Spacer()
-                ScanButton()
+                ScanButton(scanCallback: {
+                    isScanning = !isScanning
+                })
             }
         }
     }
