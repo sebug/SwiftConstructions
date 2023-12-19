@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ScanView.swift
 //  SwiftConstructions
 //
 //  Created by Sebastian Gfeller on 19.12.2023.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ScanView: View {
     var body: some View {
-        ScanHost()
+        Text("Scanning Here")
     }
 }
 
 #Preview {
-    ContentView()
+    ScanView()
 }

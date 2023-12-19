@@ -15,6 +15,8 @@
 		EB4318E52B31BC8A0031CF0B /* SwiftConstructionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318E42B31BC8A0031CF0B /* SwiftConstructionsUITests.swift */; };
 		EB4318E72B31BC8A0031CF0B /* SwiftConstructionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318E62B31BC8A0031CF0B /* SwiftConstructionsUITestsLaunchTests.swift */; };
 		EB4318F42B31BD750031CF0B /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F32B31BD750031CF0B /* ScanButton.swift */; };
+		EB4318F62B31CCD60031CF0B /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F52B31CCD60031CF0B /* ScanView.swift */; };
+		EB4318F82B31CD240031CF0B /* ScanHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4318F72B31CD240031CF0B /* ScanHost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		EB4318E42B31BC8A0031CF0B /* SwiftConstructionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConstructionsUITests.swift; sourceTree = "<group>"; };
 		EB4318E62B31BC8A0031CF0B /* SwiftConstructionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConstructionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EB4318F32B31BD750031CF0B /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
+		EB4318F52B31CCD60031CF0B /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		EB4318F72B31CD240031CF0B /* ScanHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				EB4318CD2B31BC8A0031CF0B /* Assets.xcassets */,
 				EB4318CF2B31BC8A0031CF0B /* Preview Content */,
 				EB4318F32B31BD750031CF0B /* ScanButton.swift */,
+				EB4318F52B31CCD60031CF0B /* ScanView.swift */,
+				EB4318F72B31CD240031CF0B /* ScanHost.swift */,
 			);
 			path = SwiftConstructions;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4318CC2B31BC890031CF0B /* ContentView.swift in Sources */,
+				EB4318F62B31CCD60031CF0B /* ScanView.swift in Sources */,
+				EB4318F82B31CD240031CF0B /* ScanHost.swift in Sources */,
 				EB4318F42B31BD750031CF0B /* ScanButton.swift in Sources */,
 				EB4318CA2B31BC890031CF0B /* SwiftConstructionsApp.swift in Sources */,
 			);
