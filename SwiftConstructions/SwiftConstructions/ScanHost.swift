@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ScanHost: View {
     @State private var isScanning = false
-    @Binding var result: String
-    @Binding var resultCaptured: Bool
+    @State var result: String = ""
+    @State var resultCaptured: Bool = false
     
     var body: some View {
         VStack {
@@ -22,6 +22,7 @@ struct ScanHost: View {
                     Spacer()
                 }
                 .padding()
+                Text(result)
                 Spacer()
                 ScanView(result:$result,
                 resultCaptured: $resultCaptured)
@@ -38,9 +39,4 @@ struct ScanHost: View {
             }
         }
     }
-}
-
-#Preview {
-    ScanHost(result: .constant("SampleResult"), resultCaptured: 
-             .constant(false))
 }
